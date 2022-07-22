@@ -1,0 +1,14 @@
+/Basics/.vs/*
+/*/*/obj/*
+/*/*/bin/*
+.idea
+/csharp-basics/*/*/.vs/*
+/csharp-basics/exercises/*/*/obj/*
+/csharp-basics/exercises/*/*/bin/*
+/.vs/*
+*.cache
+*/**/obj/*
+*/**/bin/*
+
+/**/.vs/*
+/**/packages/*
