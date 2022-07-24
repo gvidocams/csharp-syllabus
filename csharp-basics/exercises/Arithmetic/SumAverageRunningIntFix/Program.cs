@@ -6,12 +6,8 @@ namespace SumAverageRunningInt
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Test");
-            Console.ReadKey();
-            /*
-            Console.ReadKey();
             var sum = 0;
-            //int average;
+            double average;
             const int lowerBound = 1;
             const int upperBound = 100;
 
@@ -19,7 +15,11 @@ namespace SumAverageRunningInt
             {
                 sum += number;
             }
-            */
+            average = Convert.ToDouble(sum) / (upperBound - lowerBound + 1);
+
+            Console.WriteLine($"The sum of {lowerBound} to {upperBound} is {sum}");
+            Console.WriteLine($"The average is {average}");
+            Console.ReadLine();
         }
     }
 }
