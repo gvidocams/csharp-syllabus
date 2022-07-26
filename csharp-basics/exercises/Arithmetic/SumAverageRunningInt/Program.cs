@@ -15,6 +15,7 @@ namespace SumAverageRunningInt
             {
                 sum += number;
             }
+
             average = Convert.ToDouble(sum) / (upperBound - lowerBound + 1);
 
             Console.WriteLine($"The sum of {lowerBound} to {upperBound} is {sum}");
