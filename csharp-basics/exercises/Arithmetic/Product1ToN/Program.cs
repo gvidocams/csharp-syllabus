@@ -6,6 +6,7 @@ namespace Product1ToN
     {
         static void Main(string[] args)
         {
+            
             Console.WriteLine("Get factorial of a number\n");
 
             Console.Write("Enter a number: ");
@@ -16,7 +17,7 @@ namespace Product1ToN
             {
                 factorial *= i;
             }
-
+            
             Console.WriteLine(factorial);
         }
     }
