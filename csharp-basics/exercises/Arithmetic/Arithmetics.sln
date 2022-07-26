@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product1ToN", "Product1ToN\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessTheNumber", "GuessTheNumber\GuessTheNumber.csproj", "{A0D3B83E-2FBC-47DC-9C23-B3EE2ABA1FE6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CozaLozaWoza", "CozaLozaWoza\CozaLozaWoza.csproj", "{DDB8B2F5-F301-4B79-9D54-63D2CEC69D45}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{A0D3B83E-2FBC-47DC-9C23-B3EE2ABA1FE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0D3B83E-2FBC-47DC-9C23-B3EE2ABA1FE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0D3B83E-2FBC-47DC-9C23-B3EE2ABA1FE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDB8B2F5-F301-4B79-9D54-63D2CEC69D45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDB8B2F5-F301-4B79-9D54-63D2CEC69D45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDB8B2F5-F301-4B79-9D54-63D2CEC69D45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDB8B2F5-F301-4B79-9D54-63D2CEC69D45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
