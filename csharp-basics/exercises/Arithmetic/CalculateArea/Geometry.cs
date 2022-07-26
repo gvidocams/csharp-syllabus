@@ -21,8 +21,8 @@ namespace CalculateArea
         
         public static double AreaOfTriangle(decimal ground, decimal h)
         {
-            return Convert.ToDouble(ground * h / 2);
+            const int TriangleCoefficient = 2;
+            return Convert.ToDouble(ground * h / TriangleCoefficient);
         }
-        
     }
 }
