@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessTheNumber", "GuessTheN
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CozaLozaWoza", "CozaLozaWoza\CozaLozaWoza.csproj", "{DDB8B2F5-F301-4B79-9D54-63D2CEC69D45}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoranOrHarshad", "MoranOrHarshad\MoranOrHarshad.csproj", "{5DAD4023-06AF-4F09-9EAD-7E551040039D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{DDB8B2F5-F301-4B79-9D54-63D2CEC69D45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDB8B2F5-F301-4B79-9D54-63D2CEC69D45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDB8B2F5-F301-4B79-9D54-63D2CEC69D45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DAD4023-06AF-4F09-9EAD-7E551040039D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DAD4023-06AF-4F09-9EAD-7E551040039D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DAD4023-06AF-4F09-9EAD-7E551040039D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DAD4023-06AF-4F09-9EAD-7E551040039D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
