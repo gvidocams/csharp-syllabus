@@ -18,6 +18,7 @@ namespace SumOfAllNumbers
 
             Console.WriteLine(GetSumOfDigits(userInput));
         }
+
         static int GetSumOfDigits(string seriesOfDigits)
         {
             string[] listOfDigits = seriesOfDigits.Split(' ');
