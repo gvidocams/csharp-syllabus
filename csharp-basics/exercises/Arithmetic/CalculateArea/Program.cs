@@ -45,10 +45,8 @@ namespace CalculateArea
 
         public static void CalculateCircleArea()
         {
-            decimal r = 0;
-
             Console.Write("What is the circle's radius? ");
-            r = Convert.ToDecimal(Console.ReadLine());
+            var r = Convert.ToDecimal(Console.ReadLine());
 
             bool isValidInput = ValidateInput(r);
 
