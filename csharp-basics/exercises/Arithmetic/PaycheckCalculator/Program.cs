@@ -22,7 +22,10 @@ namespace PaycheckCalculator
 
         static string GetWage(double basePay, int hoursWorked)
         {
-            if (hoursWorked > 60 || basePay < 8) { return "error"; }
+            if (hoursWorked > 60 || basePay < 8) 
+            {
+                return "error"; 
+            }
 
             const int BasePayMaxHours = 40;
             const double OvertimeMultiplier = 1.5;
