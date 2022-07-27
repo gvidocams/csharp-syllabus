@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyNameAndBirthYear", "MyNam
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisplayClassesAndTeachers", "DisplayClassesAndTeachers\DisplayClassesAndTeachers.csproj", "{3132A725-91A9-43CD-ACE6-FFE56033D29A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumOfAllNumbers", "SumOfAllNumbers\SumOfAllNumbers.csproj", "{9BBC20AC-2D27-4DC1-A72B-9D870D936323}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{3132A725-91A9-43CD-ACE6-FFE56033D29A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3132A725-91A9-43CD-ACE6-FFE56033D29A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3132A725-91A9-43CD-ACE6-FFE56033D29A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BBC20AC-2D27-4DC1-A72B-9D870D936323}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BBC20AC-2D27-4DC1-A72B-9D870D936323}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BBC20AC-2D27-4DC1-A72B-9D870D936323}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BBC20AC-2D27-4DC1-A72B-9D870D936323}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
