@@ -12,7 +12,7 @@ namespace DisplayClassesAndTeachers
         {
             const string TopAndBottomLine = "+------------------------------------------------------------+";
 
-            string[,] classes = new string[9, 2]
+            string[,] classes = new string[8, 2]
             {
                 {"English III", "Ms. Lapan"},
                 {"Precalculus", "Mrs. Gideon"},
@@ -20,9 +20,8 @@ namespace DisplayClassesAndTeachers
                 {"Biotechnology", "Ms. Palmer"},
                 {"Principles of Technology I", "Ms. Garcia"},
                 {"Latin II", "Mrs. Barnett"},
-                {"English III", "Ms. Lapan"},
-                {"English III", "Ms. Lapan"},
-                {"English III", "Ms. Lapan"}
+                {"AP US History", "Ms. Johannessen"},
+                {"Business Computer Infomation Systems", "Mr. James"}
             };
         }
     }
