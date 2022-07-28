@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumOfAllNumbers", "SumOfAll
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountUppercaseLetters", "CountUppercaseLetters\CountUppercaseLetters.csproj", "{3D97CAD9-7405-4BE4-81BD-2F497B50C21A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinutesToYearsAndDays", "MinutesToYearsAndDays\MinutesToYearsAndDays.csproj", "{6EF08C86-333E-49BA-B308-15D35F92BCB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeedAndDistanceCalculator", "SpeedAndDistanceCalculator\SpeedAndDistanceCalculator.csproj", "{56371B90-9225-4786-BDA6-ED583FF61BB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +61,14 @@ Global
 		{3D97CAD9-7405-4BE4-81BD-2F497B50C21A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D97CAD9-7405-4BE4-81BD-2F497B50C21A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D97CAD9-7405-4BE4-81BD-2F497B50C21A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EF08C86-333E-49BA-B308-15D35F92BCB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EF08C86-333E-49BA-B308-15D35F92BCB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EF08C86-333E-49BA-B308-15D35F92BCB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EF08C86-333E-49BA-B308-15D35F92BCB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56371B90-9225-4786-BDA6-ED583FF61BB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56371B90-9225-4786-BDA6-ED583FF61BB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56371B90-9225-4786-BDA6-ED583FF61BB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56371B90-9225-4786-BDA6-ED583FF61BB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
