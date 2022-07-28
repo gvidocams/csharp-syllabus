@@ -28,17 +28,35 @@ namespace DisplayClassesAndTeachers
             string teacher7 = "Ms. Johannessen";
             string teacher8 = "Mr. James";
 
+            string[,] classesAndTeachers = new string[8, 2] {
+                {class1, teacher1},
+                {class2, teacher2},
+                {class3, teacher3},
+                {class4, teacher4},
+                {class5, teacher5},
+                {class6, teacher6},
+                {class7, teacher7},
+                {class8, teacher8},
+            };
+            
             const string TopAndBottomLine = "+------------------------------------------------------------+";
 
             Console.WriteLine(TopAndBottomLine);
-            Console.WriteLine($"| 1 |                          {class1} |       {teacher1} |");
-            Console.WriteLine($"| 2 |                          {class2} |     {teacher2} |");
-            Console.WriteLine($"| 3 |                         {class3} |       {teacher3} |");
-            Console.WriteLine($"| 4 |                        {class4} |      {teacher4} |");
-            Console.WriteLine($"| 5 |           {class5} |      {teacher5} |");
-            Console.WriteLine($"| 6 |                             {class6} |    {teacher6} |");
-            Console.WriteLine($"| 7 |                        {class7} | {teacher7} |");
-            Console.WriteLine($"| 8 | {class8} |       {teacher8} |");
+
+            for(int i = 0; i < classesAndTeachers.GetLength(0); i++)
+            {
+                const int ClassesRowLength = 37;
+                const int TeachersRowLength = 16;
+
+                string thisClass = classesAndTeachers[i,0];
+                string thisTeacher = classesAndTeachers[i, 1];
+
+                var classWhitespace = new String(' ', ClassesRowLength - thisClass.Length);
+                var teachersWhitespace = new String(' ', TeachersRowLength - thisTeacher.Length);
+
+                Console.WriteLine($"| {i + 1} |{classWhitespace + thisClass} |{teachersWhitespace + thisTeacher} |");
+            }
+
             Console.WriteLine(TopAndBottomLine);
         }
     }
