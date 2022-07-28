@@ -18,7 +18,6 @@ namespace SadFor
                     Console.WriteLine(i);
                 }
             }
-            
         }
     }
 }
