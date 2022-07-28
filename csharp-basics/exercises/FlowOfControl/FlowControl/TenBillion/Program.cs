@@ -4,7 +4,6 @@ namespace TenBillion
 {
     class Program
     {
-        //TODO Write a C# program that reads an positive integer and count the number of digits the number (less than ten billion) has.
         static void Main(string[] args)
         {
             Console.Write("Input an integer number less than ten billion: ");
@@ -14,7 +13,6 @@ namespace TenBillion
 
             if (inputType.Equals(typeof(Int64))) 
             {
-                //todo - check if n is less than zero
                 if (input < 0) 
                 {
                     input *= -1;
