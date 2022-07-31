@@ -10,6 +10,7 @@ namespace Exercise2
 
             Console.Write("Please enter a min number: ");
             int minNumber = int.Parse(Console.ReadLine());
+
             Console.Write("\nPlease enter a max number: ");
             int maxNumber = int.Parse(Console.ReadLine());
 
