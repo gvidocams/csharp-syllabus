@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayOfTen", "ArrayOfTen\Ar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapMe", "CapMe\CapMe.csproj", "{C32DC575-A799-4D41-BEB7-30C8F41F088B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumOfPosAndNeg", "SumOfPosAndNeg\SumOfPosAndNeg.csproj", "{0E1860AE-0B29-4A5F-A1A7-A739BD8F0EE5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{C32DC575-A799-4D41-BEB7-30C8F41F088B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C32DC575-A799-4D41-BEB7-30C8F41F088B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C32DC575-A799-4D41-BEB7-30C8F41F088B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E1860AE-0B29-4A5F-A1A7-A739BD8F0EE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E1860AE-0B29-4A5F-A1A7-A739BD8F0EE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E1860AE-0B29-4A5F-A1A7-A739BD8F0EE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E1860AE-0B29-4A5F-A1A7-A739BD8F0EE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
