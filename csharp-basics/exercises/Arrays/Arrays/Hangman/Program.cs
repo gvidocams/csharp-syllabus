@@ -45,7 +45,11 @@ namespace Hangman
 
         static string GetWord()
         {
-            return "apple";
+            Random random = new Random();
+            int randomIndex = random.Next(words.Length);
+            string word = words[randomIndex];
+
+            return word;
         }
 
         static char[] InitLine()
