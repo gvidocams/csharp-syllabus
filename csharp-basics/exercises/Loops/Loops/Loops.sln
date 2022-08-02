@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise5", "Exercise5\Exer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise6", "Exercise6\Exercise6.csproj", "{CA8F91B1-6E83-43BE-8BC0-02D967BF953D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Piglet", "Piglet\Piglet.csproj", "{C29B7C3C-A491-47E2-852F-6D9983119F5A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{CA8F91B1-6E83-43BE-8BC0-02D967BF953D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA8F91B1-6E83-43BE-8BC0-02D967BF953D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA8F91B1-6E83-43BE-8BC0-02D967BF953D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C29B7C3C-A491-47E2-852F-6D9983119F5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C29B7C3C-A491-47E2-852F-6D9983119F5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C29B7C3C-A491-47E2-852F-6D9983119F5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C29B7C3C-A491-47E2-852F-6D9983119F5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
