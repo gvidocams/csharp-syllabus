@@ -15,11 +15,11 @@ namespace TicTacToe
 
             if (CheckWin() == 1)
             {
-                Console.WriteLine($"Player {turn} won!");
+                Console.WriteLine($"\nPlayer {turn} won!");
             }
             else
             {
-                Console.WriteLine("It's a draw!");
+                Console.WriteLine("\nIt's a draw!");
             }
         }
 
@@ -63,9 +63,9 @@ namespace TicTacToe
 
         private static void GetUserInput()
         {
-            Console.WriteLine($"\nThis is player {turn} turn");
+            Console.WriteLine($"\nPlayer {turn}!");
 
-            Console.WriteLine("Enter the row and column (format: r c) of which you want to place");
+            Console.Write("Choose your location (row, column): ");
             int[] userChoice = Array.ConvertAll(Console.ReadLine().Split(' '), input => Convert.ToInt32(input));
 
             if(ValidateChoice(userChoice))
