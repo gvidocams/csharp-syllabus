@@ -10,15 +10,13 @@ namespace Exercise2
             
             Console.Write("Input number of terms: ");
             n = Convert.ToInt32(Console.ReadLine());
-            /*
-            todo - complete loop to multiply i with itself n times, it is NOT allowed to use Math.Pow()
-            */
+            
             for (i = 0; i < n; i++)
             {
                 i *= i;
             }
 
-            Console.WriteLine($"1 to the power of {n} is: {i}");
+            Console.WriteLine($"Result is: {i}");
             Console.ReadKey();
         }
     }
