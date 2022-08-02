@@ -24,8 +24,6 @@ namespace Exercise9
 
                 Console.WriteLine($"{dice1} and {dice2} = {sum}");
             }
-
-            Console.ReadKey();
         }
 
         static int GetAndValidateInput()
