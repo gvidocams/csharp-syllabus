@@ -18,7 +18,7 @@
 
         private double ConsumptionPer100Km()
         {
-            return 0;
+            return 100 / CalculateConsumption();
         }
 
         public bool GasHog()

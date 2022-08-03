@@ -10,14 +10,17 @@ namespace FuelConsumptionCalculator
     {
         private static void Main(string[] args)
         {
-            int startKilometers;
+            int startKilometers = 0;
             int liters;
 
-            Car Golf = new Car(50, 100, 5);
-            Car Bmw = new Car(50, 100, 2);
+            Console.WriteLine("Fuel Consumption Calculator");
+
+            Car Golf = new Car(startKilometers);
+            Car Bmw = new Car(startKilometers);
+
             for (int i = 1; i <= 3; i++)
             {
-                Console.Write($"Enter {i}. odometer reading for Golf: ");
+                Console.Write($"\nEnter {i}. odometer reading for Golf: ");
                 startKilometers = Convert.ToInt32(Console.ReadLine());    
                 Console.Write("Enter liters reading: ");
                 liters = Convert.ToInt32(Console.ReadLine());
@@ -30,8 +33,8 @@ namespace FuelConsumptionCalculator
                 Bmw.FillUp(startKilometers, liters);
             }
 
-            Console.WriteLine("\nKilometers per liter are " + Golf.CalculateConsumption() + " gasHog:" + Golf.GasHog());
-            Console.WriteLine("Car1 Kilometers per liter are " + Bmw.CalculateConsumption()+ " economyCar:" + Bmw.EconomyCar());
+            Console.WriteLine("\nGolf kilometers per liter are " + Math.Round(Golf.CalculateConsumption(), 2) + " gasHog: " + Golf.GasHog());
+            Console.WriteLine("BMW kilometers per liter are " + Math.Round(Bmw.CalculateConsumption(), 2) + " economyCar: " + Bmw.EconomyCar());
             Console.ReadKey();
         }
     }
