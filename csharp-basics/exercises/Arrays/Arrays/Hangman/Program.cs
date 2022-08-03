@@ -93,14 +93,9 @@ namespace Hangman
             }
         }
 
-        static bool CheckForWinOrLoss(char[] gameLine)
+        static bool IsWinner(char[] gameLine)
         {
-            if (Array.IndexOf(gameLine, '_') == -1)
-            {
-                return true;
-            }
-
-            return false;
+            return Array.IndexOf(gameLine, '_') == -1;
         }
     }
 }
