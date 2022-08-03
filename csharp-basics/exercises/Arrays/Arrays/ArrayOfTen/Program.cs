@@ -25,6 +25,7 @@ namespace ArrayOfTen
             Console.WriteLine($"Array 1: {String.Join(" ", array)}");
             Console.WriteLine($"Array 2: {String.Join(" ", arrayCopy)}");
         }
+
         static int[] GenerateRandomArray()
         {
             const int ArrayLength = 10;
