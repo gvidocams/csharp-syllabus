@@ -68,7 +68,7 @@ namespace TicTacToe
             Console.Write("Choose your location (row, column): ");
             int[] userChoice = Array.ConvertAll(Console.ReadLine().Split(' '), input => Convert.ToInt32(input));
 
-            if(ValidateChoice(userChoice))
+            if(IsAValidChoice(userChoice))
             {
                 int row = userChoice[0];
                 int column = userChoice[1];
@@ -98,7 +98,7 @@ namespace TicTacToe
             }
         }
         
-        private static bool ValidateChoice(int[] choice)
+        private static bool IsAValidChoice(int[] choice)
         {
             int row = choice[0];
             int column = choice[1];
@@ -112,37 +112,16 @@ namespace TicTacToe
         private static int CheckWin()
         {
             //Horizontal winning conditions
-            if (board[0, 0] == board[0, 1] && board[0, 1] == board[0, 2] && board[0, 0] != ' ')
-            {
-                return 1;
-            }
-            else if (board[1, 0] == board[1, 1] && board[1, 1] == board[1, 2] && board[1, 0] != ' ')
-            {
-                return 1;
-            }
-            else if (board[2, 0] == board[2, 1] && board[2, 1] == board[2, 2] && board[2, 0] != ' ')
-            {
-                return 1;
-            }
+            if (board[0, 0] == board[0, 1] && board[0, 1] == board[0, 2] && board[0, 0] != ' ' ||
+                board[1, 0] == board[1, 1] && board[1, 1] == board[1, 2] && board[1, 0] != ' ' ||
+                board[2, 0] == board[2, 1] && board[2, 1] == board[2, 2] && board[2, 0] != ' ' ||
             //Vertical winning conditions
-            else if (board[0, 0] == board[1, 0] && board[1, 0] == board[2, 0] && board[0, 0] != ' ')
-            {
-                return 1;
-            }
-            else if (board[0, 1] == board[1, 1] && board[1, 1] == board[2, 1] && board[0, 1] != ' ')
-            {
-                return 1;
-            }
-            else if (board[0, 2] == board[1, 2] && board[1, 2] == board[2, 2] && board[0, 2] != ' ')
-            {
-                return 1;
-            }
+                board[0, 0] == board[1, 0] && board[1, 0] == board[2, 0] && board[0, 0] != ' ' ||
+                board[0, 1] == board[1, 1] && board[1, 1] == board[2, 1] && board[0, 1] != ' ' ||
+                board[0, 2] == board[1, 2] && board[1, 2] == board[2, 2] && board[0, 2] != ' ' ||
             //Diagonal winning conditions
-            else if (board[0, 0] == board[1, 1] && board[1, 1] == board[2, 2] && board[0, 0] != ' ')
-            {
-                return 1;
-            }
-            else if (board[0, 2] == board[1, 1] && board[1, 1] == board[2, 0] && board[0, 2] != ' ')
+                board[0, 0] == board[1, 1] && board[1, 1] == board[2, 2] && board[0, 0] != ' ' ||
+                board[0, 2] == board[1, 1] && board[1, 1] == board[2, 0] && board[0, 2] != ' ')
             {
                 return 1;
             }
