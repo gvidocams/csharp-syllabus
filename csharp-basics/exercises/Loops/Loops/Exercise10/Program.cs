@@ -18,7 +18,6 @@ namespace Exercise10
                 int line = index;
                 for (int j = min; j <= max; j++)
                 {
-                    
                     if(line > max)
                     {
                         line = min;
