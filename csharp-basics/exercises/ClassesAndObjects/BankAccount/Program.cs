@@ -4,12 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace BankAccount
 {
     class Program
     {
         static void Main(string[] args)
         {
+            BankAccount Benben = new BankAccount("Benson", (decimal)17.42);
+            
+
+            Console.WriteLine(Benben.ShowUserNameAndBalance());
         }
     }
 }
