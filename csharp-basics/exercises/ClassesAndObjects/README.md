@@ -226,14 +226,19 @@ Output should be similar to this:
 How much money is in the account?: 10000
 Enter the annual interest rate:5
 How long has the account been opened? 4
-Enter amount deposited for month: 1: 100
-Enter amount withdrawn for 1: 1000
-Enter amount deposited for month: 2: 230
-Enter amount withdrawn for 2: 103
-Enter amount deposited for month: 3: 4050
-Enter amount withdrawn for 3: 2334
-Enter amount deposited for month: 4: 3450
-Enter amount withdrawn for 4: 2340
+
+Enter amount deposited for month 1: 100
+Enter amount withdrawn for month 1: 1000
+
+Enter amount deposited for month 2: 230
+Enter amount withdrawn for month 2: 103
+
+Enter amount deposited for month 3: 4050
+Enter amount withdrawn for month 3: 2334
+
+Enter amount deposited for month 4: 3450
+Enter amount withdrawn for month 4: 2340
+
 Total deposited: $7,830.00
 Total withdrawn: $5,777.00
 Interest earned: $29,977.72
