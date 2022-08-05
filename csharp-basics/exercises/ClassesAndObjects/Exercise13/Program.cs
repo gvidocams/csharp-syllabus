@@ -24,7 +24,6 @@ namespace Exercise13
             Console.WriteLine(s2.GetCost());
             Console.WriteLine(s2.GetPrice());
             Console.WriteLine(s2.GetName());
-
         }
     }
 }
