@@ -402,7 +402,7 @@ After completing the above, make sure that your main method does the following:
   - Transfers 50.0 from account A to account B
   - Transfers 25.0 from account B to account C
 
-  ## Exercise #12
+## Exercise #12
   Multiple Choice Tests
   Your task is to write a program which allows teachers to create a multiple choice test in a class called Testpaper and also be able to assign a minimum pass mark. 
   The Testpaper class should implement the ITestpaper interface given in the code template which has the following properties:
@@ -436,7 +436,7 @@ After completing the above, make sure that your main method does the following:
   student2.TestsTaken ➞ { "Chemistry: Failed! (25%)", "Computing: Failed! (43%)" }
   ```
 
-  ## Exercise #13
+## Exercise #13
   Fruit Smoothie
 
   Create a class Smoothie and do the following:
