@@ -24,6 +24,7 @@ namespace VideoStore
                 if(inventory[i].title == title)
                 {
                     inventory[i].BeingCheckedOut();
+                    return;
                 }
             }
         }
@@ -35,6 +36,7 @@ namespace VideoStore
                 if (inventory[i].title == title)
                 {
                     inventory[i].BeingReturned();
+                    return;
                 }
             }
         }
