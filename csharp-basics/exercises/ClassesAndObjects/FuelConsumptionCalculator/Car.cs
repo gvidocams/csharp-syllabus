@@ -2,12 +2,14 @@
 {
     public class Car
     {
+        public string carName;
         double startKilometers;
         double endKilometers;
         double liters;
 
-        public Car(double startOdo)
+        public Car(string carName, double startOdo)
         {
+            this.carName = carName;
             this.startKilometers = startOdo;
         }
 
