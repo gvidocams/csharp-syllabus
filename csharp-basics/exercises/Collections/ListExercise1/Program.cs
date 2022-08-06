@@ -10,8 +10,6 @@ namespace ListExercise1
     {
         private static void Main(string[] args)
         {
-            //TODO: Write a C# program to create a new list, add some elements (string) and print out the collection.
-            //TODO: Add 5 colors to list
             var colors = new List<string> { "Yellow", "Brown" };
 
             Console.WriteLine(String.Join(" ", colors));
