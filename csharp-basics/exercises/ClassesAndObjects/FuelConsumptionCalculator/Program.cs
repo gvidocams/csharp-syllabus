@@ -10,31 +10,33 @@ namespace FuelConsumptionCalculator
     {
         private static void Main(string[] args)
         {
-            int startKilometers;
-            int liters;
-            
-            Console.WriteLine();
+            Console.WriteLine("Fuel Consumption Calculator");
 
-            Car car = new Car(0);
-            Car car1 = new Car(0);
-            for (int i = 0; i < 3; i++)
+            int startKilometers = 0;
+
+            Car Audi = new Car("Audi", startKilometers);
+            Car Bmw = new Car("BMW", startKilometers);
+
+            for (int i = 1; i <= 3; i++)
             {
-                Console.Write("Enter first reading: ");
-                startKilometers = Convert.ToInt32(Console.ReadLine());    
-                Console.Write("Enter liters reading: ");
-                liters = Convert.ToInt32(Console.ReadLine());
-                car.FillUp(startKilometers, liters);
-                
-                Console.Write("Enter first reading: ");
-                startKilometers = Convert.ToInt32(Console.ReadLine());    
-                Console.Write("Enter liters reading: ");
-                liters = Convert.ToInt32(Console.ReadLine());
-                car1.FillUp(startKilometers, liters);
+                SetOdometerAndLitersReading(Audi, i);
+
+                SetOdometerAndLitersReading(Bmw, i);
             }
 
-            Console.WriteLine("Kilometers per liter are " + car.CalculateConsumption() + " gasHog:" + car.GasHog());
-            Console.WriteLine("Car1 Kilometers per liter are " + car1.CalculateConsumption()+ " economyCar:" + car.EconomyCar());
+            Console.WriteLine("\nAudi kilometers per liter are " + Math.Round(Audi.CalculateConsumption(), 2) + " gasHog: " + Audi.GasHog());
+            Console.WriteLine("BMW kilometers per liter are " + Math.Round(Bmw.CalculateConsumption(), 2) + " economyCar: " + Bmw.EconomyCar());
             Console.ReadKey();
+        }
+
+        private static void SetOdometerAndLitersReading(Car car, int readingCount)
+        {
+            Console.Write($"\nEnter {readingCount}. odometer reading for {car.carName}: ");
+            var odometerReading = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter liters reading: ");
+            var literReading = Convert.ToInt32(Console.ReadLine());
+
+            car.FillUp(odometerReading, literReading);
         }
     }
 }

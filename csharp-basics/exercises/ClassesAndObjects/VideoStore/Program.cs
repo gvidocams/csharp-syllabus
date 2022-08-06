@@ -14,7 +14,7 @@ namespace VideoStore
         {
             while (true)
             {
-                Console.WriteLine("Choose the operation you want to perform ");
+                Console.WriteLine("\nChoose the operation you want to perform ");
                 Console.WriteLine("Choose 0 for EXIT");
                 Console.WriteLine("Choose 1 to fill video store");
                 Console.WriteLine("Choose 2 to rent video (as user)");

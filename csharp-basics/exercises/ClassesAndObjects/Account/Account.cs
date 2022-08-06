@@ -7,17 +7,26 @@
 
         public Account(string v1, double v2)
         {
-            
+            _name = v1;
+            _money = v2;
         }
 
         public double Withdrawal(double i)
         {
-            return i;
+            if(_money >= i)
+            {
+                _money -= i;
+                return i;
+            }
+            else
+            {
+                return 0;
+            }
         }
 
         public void Deposit(double i)
         {
-            
+            _money += i;
         }
 
         public double Balance()
