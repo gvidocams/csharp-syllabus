@@ -33,15 +33,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListExercise11", "ListExerc
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Linq", "Linq", "{A112C9BA-10AD-4D4E-A7D8-C4F6753A6215}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaysNames", "DaysNames\DaysNames.csproj", "{6F9D2B56-2257-40B9-AD37-49508E033757}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DaysNames", "DaysNames\DaysNames.csproj", "{6F9D2B56-2257-40B9-AD37-49508E033757}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumbersFromRange", "NumbersFromRange\NumbersFromRange.csproj", "{C82B6E7E-DA20-43DE-922C-BF288660188E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumbersFromRange", "NumbersFromRange\NumbersFromRange.csproj", "{C82B6E7E-DA20-43DE-922C-BF288660188E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecryptNumber", "DecryptNumber\DecryptNumber.csproj", "{B332A2F2-F418-4FEA-A89E-8408EF27438D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DecryptNumber", "DecryptNumber\DecryptNumber.csproj", "{B332A2F2-F418-4FEA-A89E-8408EF27438D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReplaceSubstring", "ReplaceSubstring\ReplaceSubstring.csproj", "{95866E02-CF89-4230-8939-D7E832804676}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReplaceSubstring", "ReplaceSubstring\ReplaceSubstring.csproj", "{95866E02-CF89-4230-8939-D7E832804676}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniqueValues", "UniqueValues\UniqueValues.csproj", "{0C3C99BF-7B23-4573-B285-2FAE43DA51FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UniqueValues", "UniqueValues\UniqueValues.csproj", "{0C3C99BF-7B23-4573-B285-2FAE43DA51FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise4", "Exercise4\Exercise4.csproj", "{4D645B81-1A2E-4E2D-9920-3226906A7A8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -121,6 +123,10 @@ Global
 		{0C3C99BF-7B23-4573-B285-2FAE43DA51FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C3C99BF-7B23-4573-B285-2FAE43DA51FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C3C99BF-7B23-4573-B285-2FAE43DA51FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D645B81-1A2E-4E2D-9920-3226906A7A8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D645B81-1A2E-4E2D-9920-3226906A7A8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D645B81-1A2E-4E2D-9920-3226906A7A8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D645B81-1A2E-4E2D-9920-3226906A7A8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
