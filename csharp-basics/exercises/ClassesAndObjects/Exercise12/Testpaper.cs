@@ -6,12 +6,6 @@ using System.Threading.Tasks;
 
 namespace Exercise12
 {
-    public interface ITestpaper
-    {
-        string Subject();
-        string[] MarkScheme();
-        int PassMark();
-    }
     public class Testpaper : ITestpaper
     {
         string subject;

@@ -6,12 +6,6 @@ using System.Threading.Tasks;
 
 namespace Exercise12
 {
-    public interface IStudent
-    {
-        List<string> TestsTaken();
-        void TakeTest(ITestpaper paper, string[] answers);
-    }
-
     public class Student : IStudent
     {
         List<string> testsTaken;
