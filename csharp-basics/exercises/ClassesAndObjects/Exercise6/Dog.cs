@@ -18,6 +18,7 @@ namespace Exercise6
             this.name = name;
             this.sex = sex;
         }
+
         public Dog(string name, string sex, string mother, string father)
         {
             this.name = name;
