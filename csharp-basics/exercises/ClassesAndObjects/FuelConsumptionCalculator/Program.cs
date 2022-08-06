@@ -13,7 +13,6 @@ namespace FuelConsumptionCalculator
             Console.WriteLine("Fuel Consumption Calculator");
 
             int startKilometers = 0;
-            int liters;
 
             Car Audi = new Car("Audi", startKilometers);
             Car Bmw = new Car("BMW", startKilometers);
