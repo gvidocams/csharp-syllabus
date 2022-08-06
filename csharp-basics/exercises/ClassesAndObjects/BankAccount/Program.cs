@@ -13,7 +13,6 @@ namespace BankAccount
         {
             BankAccount Benben = new BankAccount("Benson", (decimal)17.42);
             
-
             Console.WriteLine(Benben.ShowUserNameAndBalance());
         }
     }
