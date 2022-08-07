@@ -30,7 +30,7 @@ namespace FlightPlanner
             
             string flightPlan = FlightPlanner(startingCity);
 
-            Console.WriteLine("Your flight plan is:\n");
+            Console.WriteLine("\nYour flight plan is:\n");
             Console.WriteLine(flightPlan);
             Console.ReadKey();
         }
