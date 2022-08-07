@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace ReplaceSubstring
 {
@@ -7,8 +9,13 @@ namespace ReplaceSubstring
         static void Main(string[] args)
         {
             var words = new[] { "near", "speak", "tonight", "weapon", "customer", "deal", "lawyer" };
-            //ToDo: Write a query that replaces 'ea' substring with astersik (*) in given list of words.
-            //ToDo: "learn", "current", "deal" →  "l*rn", "current", "d*l"
+
+            IEnumerable<string> noDuplicates =
+                from word in words
+                select word.Replace("ea", "*");
+
+            Console.WriteLine(String.Join(' ', noDuplicates));
+            Console.ReadKey();
         }
     }
 }

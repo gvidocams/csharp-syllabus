@@ -27,12 +27,14 @@ namespace ListExercise9
                 "Green",
                 "Black",
                 "White",
-                "Pink"
+                "Yellow"
             };
 
             Console.WriteLine(string.Join(",", secondList));
-            //TODO: Write a C# program to join two lists.
-            //...
+
+            firstList.AddRange(secondList);
+
+            Console.WriteLine(string.Join(",", firstList));
         }
     }
 }
