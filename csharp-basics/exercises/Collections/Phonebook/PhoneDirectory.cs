@@ -10,7 +10,6 @@ namespace PhoneBook
 
         public PhoneDirectory() {
             _dictionary = new SortedDictionary<string, string>();
-            _dataCount = 0;
         }
 
         private int Find(string name) {
