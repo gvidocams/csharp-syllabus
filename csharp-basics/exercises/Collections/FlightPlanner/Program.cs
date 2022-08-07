@@ -9,7 +9,7 @@ namespace FlightPlanner
 {
     class Program
     {
-        private const string Path = "../FlightPlanner/flights.txt";
+        private const string Path = "../../flights.txt";
 
         private static void Main(string[] args)
         {
