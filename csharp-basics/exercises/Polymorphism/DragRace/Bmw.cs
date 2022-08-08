@@ -2,26 +2,26 @@ using System;
 
 namespace DragRace
 {
-    public class Bmw
+    public class Bmw : Car, IBoost
     {
         private int currentSpeed = 0;
 
-        public void SpeedUp() 
+        public override void SpeedUp() 
         {
-            currentSpeed;
+            currentSpeed += 6;
         }
 
-        public void SlowDown() 
+        public override void SlowDown() 
         {
-            currentSpeed;
+            currentSpeed -= 2;
         }
 
-        public string ShowCurrentSpeed() 
+        public void UseNitrousOxideEngine()
         {
-            return currentSpeed.ToString();
+            currentSpeed += 8;
         }
 
-        public void StartEngine() 
+        public override void StartEngine() 
         {
             Console.WriteLine("Rrrrrrr.....");
         }

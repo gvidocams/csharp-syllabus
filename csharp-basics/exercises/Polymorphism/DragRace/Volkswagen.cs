@@ -1,22 +1,22 @@
-using System;
+﻿using System;
 
 namespace DragRace
 {
-    public class Audi : Car
+    public class Volkswagen : Car
     {
         private int currentSpeed = 0;
 
-        public override void SpeedUp() 
+        public override void SpeedUp()
         {
-            currentSpeed += 4;
+            currentSpeed += 2;
         }
 
-        public override void SlowDown() 
+        public override void SlowDown()
         {
             currentSpeed -= 4;
         }
 
-        public override void StartEngine() 
+        public override void StartEngine()
         {
             Console.WriteLine("Rrrrrrr.....");
         }

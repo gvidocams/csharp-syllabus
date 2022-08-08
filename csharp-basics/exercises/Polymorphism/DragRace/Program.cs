@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace DragRace
 {
@@ -18,6 +19,34 @@ namespace DragRace
 
         private static void Main(string[] args)
         {
+            
+            var Audi = new Audi();
+            var Bmw = new Bmw();
+            var Ford = new Ford();
+            var Lexus = new Lexus();
+            var Tesla = new Tesla();
+            var Volkswagen = new Volkswagen();
+
+            var cars = new List<Car> { Audi, Bmw, Ford, Lexus, Tesla, Volkswagen };
+
+            Audi.SpeedUp();
+            Audi.ShowCurrentSpeed();
+            /*
+            for(int i = 0; i < 10; i++)
+            {
+                foreach(Car car in cars)
+                {
+                    if(i % 3 == 0)
+                    {
+                        try
+                        {
+                            car.UseNitrousOxideEngine();
+                        }
+                    }
+                }
+            }
+
+            */
             
         }
     }

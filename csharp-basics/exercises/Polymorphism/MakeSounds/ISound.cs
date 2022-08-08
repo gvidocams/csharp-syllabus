@@ -1,8 +1,7 @@
 namespace MakeSounds
 {
-    interface ISound
+    public interface ISound
     {
         void PlaySound();
     } 
-    
 }
