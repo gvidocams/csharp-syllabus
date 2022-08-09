@@ -18,9 +18,8 @@ namespace DragRace
 
             var cars = new List<Car> { Audi, Bmw, Ford, Lexus, Tesla, Volkswagen };
 
-            Audi.SpeedUp();
-            Audi.ShowCurrentSpeed();
-            
+            StartCars(cars);
+
             for(int i = 0; i < 10; i++)
             {
                 foreach(Car car in cars)
@@ -45,6 +44,14 @@ namespace DragRace
 
             Console.WriteLine($"The fastest car was {sortedCars[0].GetType().Name} with the speed of {sortedCars[0].ShowCurrentSpeed()}");
             Console.ReadKey();
+        }
+
+        static void StartCars(List<Car> cars)
+        {
+            foreach(Car Car in cars)
+            {
+                Car.StartEngine();
+            }
         }
     }
 }
