@@ -4,8 +4,6 @@ namespace DragRace
 {
     public class Volkswagen : Car
     {
-        private int currentSpeed = 0;
-
         public override void SpeedUp()
         {
             currentSpeed += 2;

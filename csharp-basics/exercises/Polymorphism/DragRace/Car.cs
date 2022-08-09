@@ -6,7 +6,7 @@ namespace DragRace
 {
     public abstract class Car : ICar
     {
-        private int currentSpeed;
+        protected int currentSpeed;
         
         public abstract void SpeedUp();
 
@@ -18,7 +18,5 @@ namespace DragRace
         }
 
         public abstract void StartEngine();
-
-        //abstract void UseNitrousOxideEngine();
     }
 }

@@ -4,7 +4,10 @@ namespace DragRace
 {
     public class Bmw : Car, IBoost
     {
-        private int currentSpeed = 0;
+        public string GetCarBrand()
+        {
+            return "BMW";
+        }
 
         public override void SpeedUp() 
         {

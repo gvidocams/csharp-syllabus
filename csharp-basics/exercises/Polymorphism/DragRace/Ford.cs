@@ -4,7 +4,10 @@ namespace DragRace
 {
     public class Ford : Car
     {
-        private int currentSpeed = 0;
+        public string GetCarBrand()
+        {
+            return "Ford";
+        }
 
         public override void SpeedUp()
         {

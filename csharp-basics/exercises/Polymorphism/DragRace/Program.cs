@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 
 namespace DragRace
@@ -31,23 +32,31 @@ namespace DragRace
 
             Audi.SpeedUp();
             Audi.ShowCurrentSpeed();
-            /*
+            
             for(int i = 0; i < 10; i++)
             {
                 foreach(Car car in cars)
                 {
-                    if(i % 3 == 0)
+                    if(i == 2)
                     {
-                        try
+                        if(car is IBoost nitrousCar)
                         {
-                            car.UseNitrousOxideEngine();
+                            nitrousCar.UseNitrousOxideEngine();
+                        }
+                        else
+                        {
+                            car.SpeedUp();
                         }
                     }
+
+                    car.SpeedUp();
                 }
             }
 
-            */
-            
+            List<Car> sortedCars = cars.OrderBy(Car => Car.ShowCurrentSpeed()).ToList();
+
+            Console.WriteLine($"The fastest car was {sortedCars[0].GetType().Name} with the speed of {sortedCars[0].ShowCurrentSpeed()}");
+            Console.ReadKey();
         }
     }
 }
