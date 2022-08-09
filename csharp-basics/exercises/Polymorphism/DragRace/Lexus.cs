@@ -4,11 +4,6 @@ namespace DragRace
 {
     public class Lexus : Car, IBoost
     {
-        public string GetCarBrand()
-        {
-            return "Lexus";
-        }
-
         public override void SpeedUp() 
         {
             currentSpeed += 4;
