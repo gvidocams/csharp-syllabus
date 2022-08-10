@@ -6,9 +6,6 @@ namespace Firm
     {
         StaffMember[] staffList;
 
-        //-----------------------------------------------------------------
-        // Sets up the list of staff members.
-        //-----------------------------------------------------------------
         public Staff()
         {
             staffList = new StaffMember[8];
@@ -36,9 +33,6 @@ namespace Firm
             ((Commision)staffList[7]).AddSales(950);
         }
 
-        //-----------------------------------------------------------------
-        // Pays all staff members.
-        //-----------------------------------------------------------------
         public void Payday()
         {
             foreach (var staff in staffList)
