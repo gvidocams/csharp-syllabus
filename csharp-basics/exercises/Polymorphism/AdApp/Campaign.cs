@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
 
+using System;
+
 namespace AdApp
 {
     public class Campaign
@@ -24,7 +26,7 @@ namespace AdApp
 
         public override string ToString()
         {
-            return "Advert Campaign" + campaign + "\nTotal Cost = "+ GetCost();
+            return "Advert Campaign " + this.GetType().Name + "\nTotal Cost = "+ GetCost();
         }
     }
 }

@@ -5,14 +5,15 @@ namespace AdApp
         private int column;
         private int rate;
 
-        public NewspaperAd(int fee) : base(fee)
+        public NewspaperAd(int fee, int rate, int column) : base(fee)
         {
+            this.rate = rate;
+            this.column = column;
         }
 
-        private new int Cost()
+        public override int Cost()
         {
-            var fee = base.Cost();
-            return fee;
+            return base.Cost() + (column * rate);
         }
 
         public override string ToString()
