@@ -54,8 +54,11 @@ namespace VendingMachine
 
         public Money InsertCoin(Money amount)
         {
-            money.Euros += amount.Euros;
-            money.Cents += amount.Cents;
+            if(amount.Cents % 10 == 0 || amount.Cents % 20 == 0 || amount.Cents % 50 == 0 || amount.Euros % 2 == 0)
+            {
+                money.Euros += amount.Euros;
+                money.Cents += amount.Cents;
+            }
 
             return amount;
         }
