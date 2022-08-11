@@ -11,8 +11,10 @@ namespace VendingMachine
         private const int _storageLimit = 20;
 
         private string _manufacturer;
+        private List<Product> _productList;
         Money money;
         Product[] products;
+        
 
         public VendingMachine(string manufacturer)
         {
@@ -28,20 +30,7 @@ namespace VendingMachine
 
         public bool HasProducts
         {
-            get => products.Length > 0;
-            /*
-            get { 
-                for(int i = 0; i < products.Length; i++)
-                {
-                    if (products[i].Name != null)
-                    {
-                        return true;
-                    }
-                }
-
-                return false;
-            }
-            */
+            get => _productList.Count > 0;
         }
 
         public Money Amount
@@ -51,7 +40,7 @@ namespace VendingMachine
 
         public Product[] Products
         {
-            get => products;
+            get => _productList.ToArray();
             set => products = value;
         }
 
@@ -81,18 +70,9 @@ namespace VendingMachine
             Product.Price = price;
             Product.Available = count;
 
-            for(int i = 0; i < products.Length; i++)
-            {
-                if (products[i].Name == null)
-                {
-                    products[i] = Product;
+            _productList.Add(Product);
 
-                    return true;
-                }
-            }
-
-            Console.WriteLine("Insuficient space!");
-            return false;
+            return true;
         }
 
         public bool UpdateProduct(int productNumber, string name, Money? price, int amount)
@@ -107,7 +87,7 @@ namespace VendingMachine
             UpdatedProduct.Price = (Money)price;
             UpdatedProduct.Available = amount;
 
-            products[productNumber] = UpdatedProduct;
+            _productList[productNumber] = UpdatedProduct;
 
             return true;
         }

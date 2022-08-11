@@ -26,9 +26,6 @@ namespace Hierarchy
                 }
                 
                 Animal Animal = FormatAnimal(animalInfo);
-
-                
-
                 Animal.MakeSound();
 
                 Console.WriteLine("\nEnter information about the food");
@@ -79,16 +76,13 @@ namespace Hierarchy
         {
             string[] foodInfo = userInput.Split(' ');
 
-            while (true)
+            if (foodInfo[0] == "Vegetable")
             {
-                switch (foodInfo[0])
-                {
-                    case "Vegetable":
-                        return new Vegetable(Convert.ToInt32(foodInfo[1]));
-
-                    case "Meat":
-                        return new Meat(Convert.ToInt32(foodInfo[1]));
-                }
+                return new Vegetable(Convert.ToInt32(foodInfo[1]));
+            }
+            else
+            {
+                return new Meat(Convert.ToInt32(foodInfo[1]));
             }
         }
     }
