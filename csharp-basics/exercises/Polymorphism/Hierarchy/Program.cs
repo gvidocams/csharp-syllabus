@@ -20,18 +20,21 @@ namespace Hierarchy
                 Console.Write("\nEnter information about the animal:");
                 animalInfo = Console.ReadLine();
 
-                if(animalInfo == "End")
+                if (animalInfo == "End")
                 {
                     break;
                 }
-
+                
                 Animal Animal = FormatAnimal(animalInfo);
+
+                
+
                 Animal.MakeSound();
 
                 Console.WriteLine("\nEnter information about the food");
                 foodInfo = Console.ReadLine();
 
-                if(foodInfo == "End")
+                if (foodInfo == "End")
                 {
                     break;
                 }
@@ -54,22 +57,21 @@ namespace Hierarchy
         {
             string[] animalInfo = userInput.Split(' ');
 
-            while (true)
+            if (animalInfo[0] == "Mouse")
             {
-                switch (animalInfo[0])
-                {
-                    case "Mouse":
-                        return new Mouse(animalInfo[0], animalInfo[1], Convert.ToDouble(animalInfo[2]), animalInfo[3], Convert.ToInt32(animalInfo[4]));
-                     
-                    case "Zebra":
-                        return new Zebra(animalInfo[0], animalInfo[1], Convert.ToDouble(animalInfo[2]), animalInfo[3], Convert.ToInt32(animalInfo[4]));
-                        
-                    case "Cat":
-                        return new Cat(animalInfo[0], animalInfo[1], animalInfo[2], Convert.ToDouble(animalInfo[3]), animalInfo[4], Convert.ToInt32(animalInfo[5]));
-                        
-                    case "Tiger":
-                        return new Tiger(animalInfo[0], animalInfo[1], Convert.ToDouble(animalInfo[2]), animalInfo[3], Convert.ToInt32(animalInfo[4]));
-                }
+                return new Mouse(animalInfo[0], animalInfo[1], Convert.ToDouble(animalInfo[2]), animalInfo[3], Convert.ToInt32(animalInfo[4]));
+            }
+            else if (animalInfo[0] == "Zebra")
+            {
+                return new Zebra(animalInfo[0], animalInfo[1], Convert.ToDouble(animalInfo[2]), animalInfo[3], Convert.ToInt32(animalInfo[4]));
+            }
+            else if (animalInfo[0] == "Cat")
+            {
+                return new Cat(animalInfo[0], animalInfo[1], animalInfo[2], Convert.ToDouble(animalInfo[3]), animalInfo[4], Convert.ToInt32(animalInfo[5]));
+            }
+            else
+            {
+                return new Tiger(animalInfo[0], animalInfo[1], Convert.ToDouble(animalInfo[2]), animalInfo[3], Convert.ToInt32(animalInfo[4]));
             }
         }
 

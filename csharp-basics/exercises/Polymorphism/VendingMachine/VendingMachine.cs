@@ -8,26 +8,28 @@ namespace VendingMachine
 {
     public class VendingMachine : IVendingMachine
     {
-        private const int _StorageLimit = 20;
+        private const int _storageLimit = 20;
 
-        string manufacturer;
+        private string _manufacturer;
         Money money;
         Product[] products;
 
         public VendingMachine(string manufacturer)
         {
-            this.manufacturer = manufacturer;
+            this._manufacturer = manufacturer;
             this.money = new Money();
-            this.products = new Product[_StorageLimit];
+            this.products = new Product[_storageLimit];
         }
 
         public string Manufacturer 
         {
-            get { return manufacturer; }
+            get => _manufacturer;
         }
 
         public bool HasProducts
         {
+            get => products.Length > 0;
+            /*
             get { 
                 for(int i = 0; i < products.Length; i++)
                 {
@@ -39,17 +41,18 @@ namespace VendingMachine
 
                 return false;
             }
+            */
         }
 
         public Money Amount
         {
-            get { return money; }
+            get => money;
         }
 
         public Product[] Products
         {
-            get { return products; }
-            set { products = value; }
+            get => products;
+            set => products = value;
         }
 
         public Money InsertCoin(Money amount)
@@ -94,7 +97,7 @@ namespace VendingMachine
 
         public bool UpdateProduct(int productNumber, string name, Money? price, int amount)
         {
-            if(productNumber < 0 || productNumber > _StorageLimit)
+            if(productNumber < 0 || productNumber > _storageLimit)
             {
                 return false;
             }
