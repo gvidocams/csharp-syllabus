@@ -2,22 +2,22 @@ namespace AdApp
 {
     public class TVAd: Advert
     {
-        int seconds;
-        int rate;
-        bool isPeakTime;
+        private int _seconds;
+        private int _rate;
+        private bool _isPeakTime;
         private const int _peakTimeMultiplier = 2;
         public TVAd(int fee, int seconds, int rate, bool isPeakTime) : base(fee)
         {
-            this.seconds = seconds;
-            this.rate = rate;
-            this.isPeakTime = isPeakTime;
+            this._seconds = seconds;
+            this._rate = rate;
+            this._isPeakTime = isPeakTime;
         }
 
         public new int Cost() 
         {
-            int cost = seconds * rate;
+            int cost = _seconds * _rate;
 
-            return base.Cost() + (isPeakTime ? cost * _peakTimeMultiplier : cost);
+            return base.Cost() + (_isPeakTime ? cost * _peakTimeMultiplier : cost);
         }
 
         public override string ToString() 

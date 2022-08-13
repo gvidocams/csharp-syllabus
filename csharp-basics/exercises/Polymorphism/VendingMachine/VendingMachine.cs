@@ -14,7 +14,6 @@ namespace VendingMachine
         private List<Product> _productList;
         Money money;
         Product[] products;
-        
 
         public VendingMachine(string manufacturer)
         {

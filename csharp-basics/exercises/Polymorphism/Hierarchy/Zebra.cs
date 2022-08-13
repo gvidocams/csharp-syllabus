@@ -21,7 +21,7 @@ namespace Hierarchy
         {
             if (Food.GetType().Name == "Vegetable")
             {
-                foodEaten += Food.quantity;
+                _foodEaten += Food.quantity;
                 Console.WriteLine("Chomp chomp");
             }
             else
@@ -32,7 +32,7 @@ namespace Hierarchy
 
         public override void Display()
         {
-            Console.WriteLine($"Animal type: {animalType} | Name: {animalName} | Weight: {animalWeight} | Living region: {livingRegion} | Food eaten: {foodEaten}");
+            Console.WriteLine($"Animal type: {_animalType} | Name: {_animalName} | Weight: {_animalWeight} | Living region: {livingRegion} | Food eaten: {_foodEaten}");
         }
     }
 }

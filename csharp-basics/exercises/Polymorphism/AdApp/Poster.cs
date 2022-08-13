@@ -8,22 +8,22 @@ namespace AdApp
 {
     public class Poster : Advert
     {
-        int width;
-        int height;
-        int numOfCopies;
-        int rate;
+        private int _width;
+        private int _height;
+        private int _numOfCopies;
+        private int _rate;
 
         public Poster(int fee, int width, int height, int numOfCopies, int rate) : base(fee)
         {
-            this.width = width;
-            this.height = height;
-            this.numOfCopies = numOfCopies;
-            this.rate = rate;
+            this._width = width;
+            this._height = height;
+            this._numOfCopies = numOfCopies;
+            this._rate = rate;
         }
 
         public new int Cost()
         {
-            int cost = (width * height) * rate * numOfCopies;
+            int cost = (_width * _height) * _rate * _numOfCopies;
 
             return base.Cost() + cost;
         }

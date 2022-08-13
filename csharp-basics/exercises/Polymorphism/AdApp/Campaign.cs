@@ -7,21 +7,21 @@ namespace AdApp
 {
     public class Campaign
     {
-        private List<Advert> campaign;
+        private List<Advert> _campaign;
 
         public Campaign() 
         {
-            campaign = new List<Advert>();
+            _campaign = new List<Advert>();
         }
 
         public void AddAdvert(Advert a) 
         {
-            campaign.Add(a);
+            _campaign.Add(a);
         }
 
         public int GetCost()
         {
-            return campaign.Sum(item => item.Cost());
+            return _campaign.Sum(item => item.Cost());
         }
 
         public override string ToString()

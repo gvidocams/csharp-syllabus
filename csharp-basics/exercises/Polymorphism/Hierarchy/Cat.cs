@@ -22,13 +22,13 @@ namespace Hierarchy
 
         public override void Eat(Food Food)
         {
-            foodEaten += Food.quantity;
+            _foodEaten += Food.quantity;
             Console.WriteLine("Chomp chomp");
         }
 
         public override void Display()
         {
-            Console.WriteLine($"Animal type: {animalType} | Name: {animalName} | Cat breed: {catBreed} | Weight: {animalWeight} | Living region: {livingRegion} | Food eaten: {foodEaten}");
+            Console.WriteLine($"Animal type: {_animalType} | Name: {_animalName} | Cat breed: {catBreed} | Weight: {_animalWeight} | Living region: {livingRegion} | Food eaten: {_foodEaten}");
         }
     }
 }

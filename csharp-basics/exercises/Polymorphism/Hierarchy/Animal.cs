@@ -8,19 +8,19 @@ namespace Hierarchy
 {
     public abstract class Animal
     {
-        protected string animalName;
-        protected string animalType;
-        protected double animalWeight;
-        protected int foodEaten;
+        private string _animalName;
+        private string _animalType;
+        private double _animalWeight;
+        private int _foodEaten;
 
         public Animal() { }
 
         public Animal(string animalType, string animalName, double animalWeight, int foodEaten)
         {
-            this.animalType = animalType;
-            this.animalName = animalName;
-            this.animalWeight = animalWeight;
-            this.foodEaten = foodEaten;
+            this._animalType = animalType;
+            this._animalName = animalName;
+            this._animalWeight = animalWeight;
+            this._foodEaten = foodEaten;
         }
         
         public abstract void MakeSound();
