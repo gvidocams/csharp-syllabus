@@ -8,10 +8,10 @@ namespace Hierarchy
 {
     public abstract class Animal
     {
-        private string _animalName;
-        private string _animalType;
-        private double _animalWeight;
-        private int _foodEaten;
+        public string _animalName;
+        public string _animalType;
+        public double _animalWeight;
+        public int _foodEaten;
 
         public Animal() { }
 
