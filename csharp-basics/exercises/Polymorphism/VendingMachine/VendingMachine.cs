@@ -1,25 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using VendingMachine.Exceptions;
 
 namespace VendingMachine
 {
     public class VendingMachine : IVendingMachine
     {
+        private int[] _validCents = { 0, 10, 20, 50 };
+        private int[] _validEuros = { 0, 1, 2 };
+
         private const int _storageLimit = 20;
 
         private string _manufacturer;
         private List<Product> _productList;
-        Money money;
-        Product[] products;
+        private Money _money;
 
-        public VendingMachine(string manufacturer)
+        public VendingMachine(string manufacturer, Money money, List<Product> productList)
         {
-            this._manufacturer = manufacturer;
-            this.money = new Money();
-            this.products = new Product[_storageLimit];
+            _manufacturer = manufacturer;
+            _money = money;
+            _productList = productList;
         }
 
         public string Manufacturer 
@@ -34,40 +35,46 @@ namespace VendingMachine
 
         public Money Amount
         {
-            get => money;
+            get => _money;
         }
 
         public Product[] Products
         {
             get => _productList.ToArray();
-            set => products = value;
+            set => _productList = value.ToList();
         }
 
         public Money InsertCoin(Money amount)
         {
-            if(amount.Cents % 10 == 0 || amount.Cents % 20 == 0 || amount.Cents % 50 == 0 || amount.Euros % 2 == 0)
+            if (!_validCents.Contains(amount.Cents) && !_validEuros.Contains(amount.Euros)) 
             {
-                money.Euros += amount.Euros;
-                money.Cents += amount.Cents;
+                throw new InvalidMoneyException();
             }
+
+            _money.Euros += amount.Euros;
+            _money.Cents += amount.Cents;
 
             return amount;
         }
 
         public Money ReturnMoney()
         {
-            Money returnedMoney = money;
-            money = new Money();
+            var returnedMoney = _money;
+            _money = new Money();
 
             return returnedMoney;
         }
 
         public bool AddProduct(string name, Money price, int count)
         {
-            var Product = new Product();
-            Product.Name = name;
-            Product.Price = price;
-            Product.Available = count;
+            Validate.Price(price);
+
+            var Product = new Product()
+            {
+                Name = name,
+                Price = price,
+                Available = count
+            };
 
             _productList.Add(Product);
 
@@ -78,13 +85,22 @@ namespace VendingMachine
         {
             if(productNumber < 0 || productNumber > _storageLimit)
             {
-                return false;
+                throw new InvalidProductNumberException();
             }
 
-            Product UpdatedProduct = new Product();
-            UpdatedProduct.Name = name;
-            UpdatedProduct.Price = (Money)price;
-            UpdatedProduct.Available = amount;
+            if(!price.HasValue)
+            {
+                price = _productList[productNumber].Price; 
+            }
+
+            Validate.Price((Money)price);
+
+            Product UpdatedProduct = new Product()
+            {
+                Name = name,
+                Price = (Money)price,
+                Available = amount
+            };
 
             _productList[productNumber] = UpdatedProduct;
 
