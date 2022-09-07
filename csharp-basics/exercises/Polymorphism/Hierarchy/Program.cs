@@ -1,14 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
+using Hierarchy.Animals;
+using Hierarchy.Foods;
+using Hierarchy.Exceptions;
 
 namespace Hierarchy
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Animal Formater");
 
+            List<Animal> animals = HierarchyLoop();
+
+            Console.WriteLine("Animal list:");
+            Console.WriteLine(animals[0].Display());
+            Console.ReadKey();
+        }
+
+        static List<Animal> HierarchyLoop()
+        {
             var animals = new List<Animal>();
 
             string animalInfo;
@@ -17,6 +29,7 @@ namespace Hierarchy
             do
             {
                 Console.WriteLine("Format: Animal_type Animal_name Cat_breed(if it's a cat) Animal_weight Living_region Food_eaten");
+                
                 Console.Write("\nEnter information about the animal:");
                 animalInfo = Console.ReadLine();
 
@@ -24,11 +37,11 @@ namespace Hierarchy
                 {
                     break;
                 }
-                
-                Animal Animal = FormatAnimal(animalInfo);
-                Animal.MakeSound();
 
-                Console.WriteLine("\nEnter information about the food");
+                Animal Animal = FormatAnimal(animalInfo);
+                Console.WriteLine(Animal.MakeSound());
+
+                Console.WriteLine("\nEnter information about the food:");
                 foodInfo = Console.ReadLine();
 
                 if (foodInfo == "End")
@@ -37,20 +50,16 @@ namespace Hierarchy
                 }
 
                 Food Food = FormatFood(foodInfo);
-                Animal.Eat(Food);
+                Console.WriteLine(Animal.Eat(Food));
 
                 animals.Add(Animal);
             }
             while (true);
 
-            Console.WriteLine("Animal list:");
-
-            animals[0].Display();
-
-            Console.ReadKey();
+            return animals;
         }
 
-        static Animal FormatAnimal(string userInput)
+        public static Animal FormatAnimal(string userInput)
         {
             string[] animalInfo = userInput.Split(' ');
 
@@ -66,23 +75,33 @@ namespace Hierarchy
             {
                 return new Cat(animalInfo[0], animalInfo[1], animalInfo[2], Convert.ToDouble(animalInfo[3]), animalInfo[4], Convert.ToInt32(animalInfo[5]));
             }
-            else
+            else if (animalInfo[0] == "Tiger")
             {
                 return new Tiger(animalInfo[0], animalInfo[1], Convert.ToDouble(animalInfo[2]), animalInfo[3], Convert.ToInt32(animalInfo[4]));
             }
+            else
+            {
+                throw new NotSupportedAnimalException(animalInfo[0]);
+            }
         }
 
-        static Food FormatFood(string userInput)
+        public static Food FormatFood(string userInput)
         {
             string[] foodInfo = userInput.Split(' ');
+            string foodType = foodInfo[0];
+            int foodAmount = Convert.ToInt32(foodInfo[1]);
 
-            if (foodInfo[0] == "Vegetable")
+            if (foodType == "Vegetable")
             {
-                return new Vegetable(Convert.ToInt32(foodInfo[1]));
+                return new Vegetable(foodAmount);
+            }
+            else if (foodType == "Meat")
+            {
+                return new Meat(foodAmount);
             }
             else
             {
-                return new Meat(Convert.ToInt32(foodInfo[1]));
+                throw new InvalidFoodException(foodType);
             }
         }
     }

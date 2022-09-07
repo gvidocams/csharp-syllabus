@@ -2,6 +2,10 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ScooterRental.Exceptions;
 using ScooterRental.Interfaces;
+// Mocking
+using Moq;
+using Moq.AutoMock;
+// Mocking
 
 namespace ScooterRental.Tests
 {
@@ -12,10 +16,26 @@ namespace ScooterRental.Tests
         private IScooterService _scooterService;
         private List<RentalDetails> _rentalDetailList;
         private List<Scooter> _inventory;
+        
+        // Mocking
+
+        private AutoMocker _mocker;
+        private IRentalCompany _company;
+        private Mock<IScooterService> _scooterServiceMock;
+        private Scooter _defaultScooter;
+        // Mocking
 
         [TestInitialize]
         public void Setup()
         {
+            // Mocking
+            _mocker = new AutoMocker();
+
+            _scooterServiceMock = _mocker.GetMock<IScooterService>();
+            _company = new RentalCompany("if", _scooterServiceMock.Object, new List<RentalDetails>());
+            _defaultScooter = new Scooter("1", 0.2m);
+            // Mocking
+
             _inventory = new List<Scooter> { new Scooter("1", 0.2m) };
             _scooterService = new ScooterService(_inventory);
             _rentalDetailList = new List<RentalDetails>();
@@ -31,6 +51,22 @@ namespace ScooterRental.Tests
             //Assert
             name.Should().Be("Bolt");
         }
+
+        // Mocking
+
+        [TestMethod]
+        public void StartRentTest()
+        {
+            _scooterServiceMock
+                .Setup(s => s.GetScooterById("1"))
+                .Returns(_defaultScooter);
+
+            _company.StartRent("1");
+
+            _defaultScooter.IsRented.Should().BeTrue();
+        }
+
+        // Mocking
 
         [TestMethod]
         public void StartRent_RentsAValidScooter_ScooterIsRented()
