@@ -1,6 +1,8 @@
-﻿namespace ScooterRental
+﻿using ScooterRental.Interfaces;
+
+namespace ScooterRental
 {
-    public class RentalDetails
+    public class RentalDetails : IRentalDetails
     {
         public string Id { get; set; }
         public DateTime StartTime { get; set; }

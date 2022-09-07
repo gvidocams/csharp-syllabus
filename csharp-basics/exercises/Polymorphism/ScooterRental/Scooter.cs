@@ -1,6 +1,8 @@
-﻿namespace ScooterRental
+﻿using ScooterRental.Interfaces;
+
+namespace ScooterRental
 {
-    public class Scooter
+    public class Scooter : IScooter
     {
         public Scooter(string id, decimal pricePerMinute)
         {
