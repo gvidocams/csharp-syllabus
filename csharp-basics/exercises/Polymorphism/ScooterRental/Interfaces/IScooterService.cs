@@ -4,7 +4,7 @@
     {
         void AddScooter(string id, decimal pricePerMinute);
         void RemoveScooter(string id);
-        IList<Scooter> GetScooters();
-        Scooter GetScooterById(string scooterId);
+        IList<IScooter> GetScooters();
+        IScooter GetScooterById(string scooterId);
     }
 }

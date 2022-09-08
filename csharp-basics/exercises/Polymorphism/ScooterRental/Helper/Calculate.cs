@@ -1,8 +1,10 @@
-﻿namespace ScooterRental
+﻿using ScooterRental.Interfaces;
+
+namespace ScooterRental
 {
     public class Calculate
     {
-        public static decimal TotalRentalPrice(RentalDetails rentalDetails)
+        public static decimal TotalRentalPrice(IRentalDetails rentalDetails)
         {
             var startTime = rentalDetails.StartTime;
             var endTime = rentalDetails.EndTime.HasValue ? (DateTime)rentalDetails.EndTime : DateTime.Now;

@@ -9,15 +9,15 @@ namespace ScooterRental.Tests
     {
         private IRentalCompany _rentalCompany;
         private IScooterService _scooterService;
-        private List<RentalDetails> _rentalDetailList;
-        private List<Scooter> _inventory;
+        private List<IRentalDetails> _rentalDetailList;
+        private List<IScooter> _inventory;
 
         [TestInitialize]
         public void Setup()
         {
-            _inventory = new List<Scooter> { new Scooter("1", 0.2m) };
+            _inventory = new List<IScooter> { new Scooter("1", 0.2m) };
             _scooterService = new ScooterService(_inventory);
-            _rentalDetailList = new List<RentalDetails>();
+            _rentalDetailList = new List<IRentalDetails>();
             _rentalCompany = new RentalCompany("Bolt", _scooterService, _rentalDetailList);
         }
 

@@ -1,10 +1,11 @@
 ﻿using ScooterRental.Exceptions;
+using ScooterRental.Interfaces;
 
 namespace ScooterRental.Helper
 {
     public static class Get
     {
-        public static Scooter Scooter(string id, IList<Scooter> scooters)
+        public static IScooter Scooter(string id, IList<IScooter> scooters)
         {
             var scooter = scooters.FirstOrDefault(scooter => scooter.Id == id);
 

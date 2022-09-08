@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ScooterRental.Exceptions;
 using ScooterRental.Helper;
+using ScooterRental.Interfaces;
 
 namespace ScooterRental.Tests
 {
@@ -9,13 +10,13 @@ namespace ScooterRental.Tests
     public class GetTests
     {
         private Scooter _scooter;
-        private IList<Scooter> _scooters;
+        private List<IScooter> _scooters;
 
         [TestInitialize]
         public void Setup()
         {
             _scooter = new Scooter("1", 0.2m);
-            _scooters = new List<Scooter> { _scooter };
+            _scooters = new List<IScooter> { _scooter };
         }
 
         [TestMethod]

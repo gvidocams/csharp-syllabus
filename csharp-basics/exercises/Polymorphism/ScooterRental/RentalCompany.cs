@@ -7,9 +7,9 @@ namespace ScooterRental
     public class RentalCompany : IRentalCompany
     {
         private IScooterService _scooterService;
-        private List<RentalDetails> _rentalList;
+        private List<IRentalDetails> _rentalList;
 
-        public RentalCompany(string name, IScooterService scooterService, List<RentalDetails> rentalPeriods)
+        public RentalCompany(string name, IScooterService scooterService, List<IRentalDetails> rentalPeriods)
         {
             Name = name;
             _scooterService = scooterService;

@@ -6,9 +6,9 @@ namespace ScooterRental
 {
     public class ScooterService : IScooterService
     {
-        public List<Scooter> _scooters;
+        public List<IScooter> _scooters;
 
-        public ScooterService(List<Scooter> inventory)
+        public ScooterService(List<IScooter> inventory)
         {
             _scooters = inventory;
         }
@@ -44,12 +44,12 @@ namespace ScooterRental
             _scooters.Remove(Get.Scooter(id, _scooters));
         }
 
-        public IList<Scooter> GetScooters()
+        public IList<IScooter> GetScooters()
         {
             return _scooters.FindAll(scooter => !scooter.IsRented).ToList();
         }
 
-        public Scooter GetScooterById(string scooterId)
+        public IScooter GetScooterById(string scooterId)
         {
             Validate.ScooterId(scooterId);
 

@@ -9,12 +9,12 @@ namespace ScooterRental.Tests
     public class ScooterServiceTests
     {
         private IScooterService _scooterService;
-        private List<Scooter> _inventory;
+        private List<IScooter> _inventory;
 
         [TestInitialize]
         public void Setup()
         {
-            _inventory = new List<Scooter> { new Scooter("1", 0.2m) };
+            _inventory = new List<IScooter> { new Scooter("1", 0.2m) };
             _scooterService = new ScooterService(_inventory);
         }
 
