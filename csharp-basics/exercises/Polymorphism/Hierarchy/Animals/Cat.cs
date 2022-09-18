@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Hierarchy.Foods;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hierarchy
+namespace Hierarchy.Animals
 {
     public class Cat : Felime
     {
@@ -15,20 +16,21 @@ namespace Hierarchy
             this.catBreed = catBreed;
         }
 
-        public override void MakeSound()
+        public override string MakeSound()
         {
-            Console.WriteLine("Meeeeooooooowwww");
+            return "Meeeeooooooowwww";
         }
 
-        public override void Eat(Food Food)
+        public override string Eat(Food Food)
         {
-            _foodEaten += Food.quantity;
-            Console.WriteLine("Chomp chomp");
+            _foodEaten += Food.Quantity;
+
+            return "Chomp chomp";
         }
 
-        public override void Display()
+        public override string Display()
         {
-            Console.WriteLine($"Animal type: {_animalType} | Name: {_animalName} | Cat breed: {catBreed} | Weight: {_animalWeight} | Living region: {livingRegion} | Food eaten: {_foodEaten}");
+            return $"Animal type: {_animalType} | Name: {_animalName} | Cat breed: {catBreed} | Weight: {_animalWeight} | Living region: {livingRegion} | Food eaten: {_foodEaten}";
         }
     }
 }

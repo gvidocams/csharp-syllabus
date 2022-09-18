@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hierarchy
+namespace Hierarchy.Foods
 {
     public abstract class Food
     {
-        public int quantity;
+        public int Quantity;
 
         public Food(int quantity)
         {
-            this.quantity = quantity;
+            Quantity = quantity;
         }
     }
 }

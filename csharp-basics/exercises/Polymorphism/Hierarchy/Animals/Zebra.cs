@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Hierarchy.Foods;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hierarchy
+namespace Hierarchy.Animals
 {
     public class Zebra : Mammal
     {
@@ -12,27 +13,28 @@ namespace Hierarchy
         {
         }
 
-        public override void MakeSound()
+        public override string MakeSound()
         {
-            Console.WriteLine("Neigh");
+            return "Neigh";
         }
 
-        public override void Eat(Food Food)
+        public override string Eat(Food Food)
         {
             if (Food.GetType().Name == "Vegetable")
             {
-                _foodEaten += Food.quantity;
-                Console.WriteLine("Chomp chomp");
+                _foodEaten += Food.Quantity;
+
+                return "Chomp chomp";
             }
             else
             {
-                Console.WriteLine("Mouse doesn't eat that type of food");
+                return "Zebra doesn't eat that type of food";
             }
         }
 
-        public override void Display()
+        public override string Display()
         {
-            Console.WriteLine($"Animal type: {_animalType} | Name: {_animalName} | Weight: {_animalWeight} | Living region: {livingRegion} | Food eaten: {_foodEaten}");
+            return $"Animal type: {_animalType} | Name: {_animalName} | Weight: {_animalWeight} | Living region: {livingRegion} | Food eaten: {_foodEaten}";
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hierarchy
+namespace Hierarchy.Animals
 {
     public abstract class Mammal : Animal
     {
@@ -15,9 +15,9 @@ namespace Hierarchy
             this.livingRegion = livingRegion;
         }
 
-        public override void Display()
+        public override string Display()
         {
-            Console.WriteLine($"Animal type: {_animalType} | Name: {_animalName} | Weight: {_animalWeight} | Living region: {livingRegion} | Food eaten: {_foodEaten}");
+            return $"Animal type: {_animalType} | Name: {_animalName} | Weight: {_animalWeight} | Living region: {livingRegion} | Food eaten: {_foodEaten}";
         }
     }
 }
